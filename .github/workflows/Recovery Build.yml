@@ -104,7 +104,7 @@ jobs:
     - name: Clone device tree
       run: |
         cd ${{ steps.pwd.outputs.workspace-folder }}/fox_${{ github.event.inputs.MANIFEST_BRANCH }}
-        git clone ${{ github.event.inputs.DEVICE_TREE_URL }} -b ${{ github.event.inputs.DEVICE_TREE_BRANCH }} ./${{ github.event.inputs.DEVICE_PATH }}
+        git clone https://github.com/rk3288/android_device_alldocube_T1030M.git
       working-directory: ${{ steps.pwd.outputs.workspace-folder }}
 
     - name: Clone common tree
